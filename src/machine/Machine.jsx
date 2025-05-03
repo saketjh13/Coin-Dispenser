@@ -39,31 +39,29 @@ function Machine() {
     }
   }, [amount, system]);
 
+  const slotSystems = [
+    { id: "us", label: "US Slot" },
+    { id: "indian", label: "Indian Slot" },
+  ];
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 py-8">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Coin Dispenser</h1>
 
       <div className="flex gap-4 mb-4">
-        <button
-          onClick={() => setSystem("us")}
-          className={`px-4 py-2 rounded focus:outline-none ${
-            system === "us"
-              ? "bg-blue-500 text-white"
-              : "bg-white border border-gray-300 text-gray-700"
-          }`}
-        >
-          US Slots
-        </button>
-        <button
-          onClick={() => setSystem("indian")}
-          className={`px-4 py-2 rounded focus:outline-none ${
-            system === "indian"
-              ? "bg-blue-500 text-white"
-              : "bg-white border border-gray-300 text-gray-700"
-          }`}
-        >
-          Indian Slots
-        </button>
+        {slotSystems.map(({ id, label }) => (
+          <button
+            key={id}
+            onClick={() => setSystem(id)}
+            className={`px-4 py-2 rounded focus:outline-none ${
+              system === id
+                ? "bg-blue-500 text-white"
+                : "bg-white border border-gray-300 text-gray-700"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
       </div>
 
       <CoinInput value={amount} onChange={handleAmountChange} />
@@ -72,4 +70,5 @@ function Machine() {
     </div>
   );
 }
-export default Machine
+
+export default Machine;
