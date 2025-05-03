@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import CoinInput from "../components/coinInput.jsx";
+import CoinInput from "../components/CoinInput.jsx";
 import CoinOutput from "../components/CoinOutput.jsx";
 import ExchangeInfo from "../components/ExchangeInfo.jsx";
 import { getUsSlotString } from "../utils/UsSlotLogic.js";
