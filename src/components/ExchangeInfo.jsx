@@ -1,4 +1,5 @@
-export default function ExchangeInfo({ system }) {
+import React from "react";
+function ExchangeInfo({ system }) {
   const usCoins = [
     { name: "Penny", symbol: "P", value: 1 },
     { name: "Nickel", symbol: "N", value: 5 },
@@ -34,3 +35,4 @@ export default function ExchangeInfo({ system }) {
     </div>
   );
 }
+export default ExchangeInfo

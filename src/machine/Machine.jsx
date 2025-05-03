@@ -5,7 +5,7 @@ import ExchangeInfo from "../components/ExchangeInfo.jsx";
 import { getUsSlotString } from "../utils/UsSlotLogic.js";
 import { getIndianSlotString } from "../utils/indianSlotLogic.js";
 
-export default function Machine() {
+function Machine() {
   const [amount, setAmount] = useState("");
   const [output, setOutput] = useState("");
   const [scientist, setScientist] = useState(null);
@@ -72,3 +72,4 @@ export default function Machine() {
     </div>
   );
 }
+export default Machine

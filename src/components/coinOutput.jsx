@@ -1,4 +1,5 @@
-export default function CoinOutput({ output, scientist }) {
+import React from "react";
+function CoinOutput({ output, scientist }) {
   if (!output) return null;
 
   const isError = output.includes("Please enter");
@@ -26,3 +27,5 @@ export default function CoinOutput({ output, scientist }) {
     </div>
   );
 }
+
+export default CoinOutput
